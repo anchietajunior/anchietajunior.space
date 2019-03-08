@@ -60,5 +60,4 @@
 #     # password: "please use keys"
 #   }
 
-config.read_encrypted_secrets = true
 server '134.209.11.7', user: 'deploy', roles: %w{app db web}
