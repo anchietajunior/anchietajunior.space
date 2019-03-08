@@ -3,11 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-# Deploy
-gem 'capistrano', '~> 3.11'
-gem 'capistrano-rails', '~> 1.4'
-gem 'capistrano-passenger', '~> 0.2.0'
-gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use postgresql as the database for Active Record
@@ -40,6 +35,21 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+group :development, :deployment do
+  gem 'capistrano', '~> 3.11', require: false
+  gem 'capistrano-rails', '~> 1.4', require: false
+  gem 'capistrano-passenger', '~> 0.2.0', require: false
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4', require: false
+
+  # net-ssh requires the gems below to support ed25519 keys
+  # for deploying via capistrano
+  # more info at https://github.com/net-ssh/net-ssh/issues/478
+  gem 'ed25519', '~> 1.2', '>= 1.2.4'
+  gem "bcrypt_pbkdf", ">= 1.0", "< 2.0"
+  gem "rbnacl", ">= 3.2", "< 5.0"
+  gem "rbnacl-libsodium"
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
