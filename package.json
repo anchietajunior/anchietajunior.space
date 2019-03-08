@@ -1,5 +1,9 @@
 {
   "name": "anchietajunior",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.7.2",
+    "bootstrap": "4.3.1",
+    "jquery": "3.3.1"
+  }
 }
