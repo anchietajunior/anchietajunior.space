@@ -10,10 +10,10 @@
   <hr class="sidebar-divider">
 
   <div class="sidebar-heading">
-    Dashboard
+    Content
   </div>
 
-  <li class="nav-item <%= 'active' if params[:action] == 'index' %> ">
+  <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == 'dashboard/posts' %> ">
     <a class="nav-link" href="<%= url_for(dashboard_posts_path) %>">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Posts</span></a>
@@ -21,13 +21,31 @@
 
   <hr class="sidebar-divider my-0">
 
-  <li class="nav-item <%= 'active' if params[:action] == 'new' %> ">
+  <li class="nav-item <%= 'active' if params[:action] == 'new' && params[:controller] == 'dashboard/posts' %> ">
     <a class="nav-link" href="<%= url_for(new_dashboard_post_path) %>">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>New Post</span></a>
   </li>
 
   <hr class="sidebar-divider">
+
+  <div class="sidebar-heading">
+    Control
+  </div>
+
+  <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == 'dashboard/users' %> ">
+    <a class="nav-link" href="<%= url_for(dashboard_users_path) %>">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Users</span></a>
+  </li>
+
+  <hr class="sidebar-divider my-0">
+
+  <li class="nav-item <%= 'active' if params[:action] == 'new' && params[:controller] == 'dashboard/users' %> ">
+    <a class="nav-link" href="<%= url_for(new_dashboard_user_path) %>">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>New User</span></a>
+  </li>
 
   <div class="text-center d-none d-md-inline">
     <button class="rounded-circle border-0" id="sidebarToggle"></button>

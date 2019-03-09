@@ -21,7 +21,7 @@ module Dashboard
 
     def create
       @post = Post.new(post_params)
-      @post.published_at = params['post']['published'] == '1' ? Date.today : nil
+      set_publication_date
       respond_to do |format|
         if @post.save
           format.html { redirect_to dashboard_posts_path(@post), notice: 'Post was successfully created.' }
@@ -33,7 +33,7 @@ module Dashboard
 
     def update
       respond_to do |format|
-        @post.published_at = params['post']['published'] == '1' ? Date.today : nil
+        set_publication_date
         if @post.update(post_params)
           format.html { redirect_to dashboard_post_path(@post), notice: 'Post was successfully updated.' }
         else
@@ -56,6 +56,10 @@ module Dashboard
 
       def post_params
         params.require(:post).permit(:title, :body, :published, :published_at)
+      end
+
+      def set_publication_date
+        @post.published_at = params['post']['published'] == '1' ? Date.today : nil
       end
   end
 end

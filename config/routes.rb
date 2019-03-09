@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   # PAGES
   get 'pages/index'
   root 'pages#index'
@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   # DASHBOARD
   namespace :dashboard do
     resources :posts
+    resources :users
   end
 end
