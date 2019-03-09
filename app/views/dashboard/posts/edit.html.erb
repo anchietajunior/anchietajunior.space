@@ -1,0 +1,7 @@
+<h1>Editing Post</h1>
+
+<%= form_with(model: @post, url: dashboard_post_path(@post), local: true) do |form| %>
+  <%= render 'form', post: @post, form: form %>
+<% end %>
+
+<%= link_to 'Show', dashboard_post_path(@post) %>
