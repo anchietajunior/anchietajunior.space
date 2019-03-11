@@ -14,6 +14,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bcrypt'
 gem 'redcarpet'
+gem 'draper'
+gem 'friendly_id', '~> 5.2.4'
 
 group :development, :deployment do
   gem 'capistrano', '~> 3.11', require: false
