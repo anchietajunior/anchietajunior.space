@@ -3,7 +3,7 @@ module Dashboard
 
     layout 'dashboard'
 
-    # before_action :authorize
+    before_action :authorize
     before_action :set_user, only: [:show, :edit, :update, :destroy]
 
     def index
