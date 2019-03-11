@@ -6,7 +6,7 @@ module Sessions
     end
 
     def call
-      Result.new(false, login!, nil)
+      Result.new(true, login!, nil)
     rescue StandardError => e
       Result.new(false, nil, e.message)
     end
@@ -16,12 +16,11 @@ module Sessions
     attr_accessor :params
 
     def login!
-      return user if user && user.authenticate(params[:password])
+      user.authenticate(params[:password])
     end
 
     def user
       @user ||= User.find_by(email: params[:email])
     end
-
   end
 end
