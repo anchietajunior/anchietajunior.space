@@ -13,6 +13,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bcrypt'
+gem 'redcarpet'
 
 group :development, :deployment do
   gem 'capistrano', '~> 3.11', require: false
