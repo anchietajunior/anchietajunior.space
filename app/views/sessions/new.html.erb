@@ -1,0 +1,18 @@
+<%= form_tag sessions_path, class: "user" do %>
+
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label_tag :email %>
+    <%= text_field_tag :email, nil, class: "form-control form-control-user"  %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :password %>
+    <%= password_field_tag :password, nil, class: "form-control form-control-user" %>
+  </div>
+
+  <%= submit_tag "Log In", class: "btn btn-primary btn-user btn-block" %>
+<% end %>
