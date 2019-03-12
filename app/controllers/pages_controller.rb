@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def index
-    @posts = Post.home
+    @posts = PostDecorator.decorate_collection(Post.home)
   end
 end
