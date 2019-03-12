@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show]
   def index
-    @posts = Post.all
+    @posts = PostDecorator.decorate_collection(Post.all_published)
   end
 
   def show
@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   private
       def set_post
-        @post = Post.friendly.find(params[:id])
+        @post = Post.friendly.find(params[:id]).decorate
       end
 
       def post_params

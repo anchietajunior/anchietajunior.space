@@ -1,28 +1,41 @@
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('../img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>All posts</h1>
+          <span class="subheading">Ruby, Rails & Javascript</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
 <!-- Main Content -->
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
-      <h2 class="" style="font-size: 2em; text-align: center;">Posts</h2>
       <% @posts.each do |post| %>
         <div class="post-preview">
-          <%= link_to post do %>
+          <a href="<%= url_for(post_path(post)) %>">
             <h2 class="post-title">
               <%= post.title %>
             </h2>
             <h3 class="post-subtitle">
-              <%= post.markdown %>
+              
             </h3>
-          <% end %>
-          Published on <%= post.published_at %></p>
+          </a>
+          <p class="post-meta">
+            Publicado em <%= post.published_at_decorated %></p>
         </div>
+        <hr>
       <% end %>
-      <hr>
-      <!-- Pager 
+      <!-- Pager -->
       <div class="clearfix">
-        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        
       </div>
-      -->
     </div>
   </div>
 </div>

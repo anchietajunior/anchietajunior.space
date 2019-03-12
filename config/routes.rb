@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   # POSTS
-  get 'posts/index'
-  get 'posts/:id', to: 'posts#show'
+  get 'posts/',    to: 'posts#index', as: 'posts'
+  get 'posts/:id', to: 'posts#show', as: 'post'
 
   # DASHBOARD
   namespace :dashboard do
