@@ -17,7 +17,6 @@ gem 'redcarpet'
 gem 'rouge'
 gem 'draper'
 gem 'friendly_id', '~> 5.2.4'
-gem 'coderay'
 
 group :development, :deployment do
   gem 'capistrano', '~> 3.11', require: false
