@@ -1,0 +1,32 @@
+ @import "bootstrap/dist/css/bootstrap";
+ @import "clean-blog";
+ @import "rouge";
+
+p {
+  width: 100%;
+}
+
+ .console {
+   background: #000;
+   color: #FFF;
+   padding: 15px;
+   width: 100%;
+ }
+
+code {
+  padding-left: 0;
+  span {
+    margin-left: 0;
+  }
+}
+
+ .ruby {
+   background-color: #494f4c;
+   color: #FFF;
+   padding: 15px;
+   width: 100%;
+ }
+
+ .page-content img {
+   max-width: 100%;
+ }

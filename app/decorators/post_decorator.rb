@@ -2,24 +2,28 @@ class PostDecorator < Draper::Decorator
 
   delegate_all
 
+  class HTML < Redcarpet::Render::HTML
+    include Rouge::Plugins::Redcarpet
+  end
+
   def markdown
-    options = {
-      filter_html:     true,
-      hard_wrap:       true,
-      link_attributes: { rel: 'nofollow', target: "_blank" },
-      space_after_headers: true,
-      fenced_code_blocks: true
+    render_options = {
+        filter_html: true,
+        hard_wrap: true,
+        link_attributes: { rel: 'nofollow' }
     }
+    renderer = HTML.new(render_options)
 
     extensions = {
-      autolink:           true,
-      superscript:        true,
-      disable_indented_code_blocks: true
+        autolink: true,
+        fenced_code_blocks: true,
+        lax_spacing: true,
+        no_intra_emphasis: true,
+        strikethrough: true,
+        superscript: true
     }
 
-    renderer = Redcarpet::Render::HTML.new(options)
     markdown = Redcarpet::Markdown.new(renderer, extensions)
-
     markdown.render(object.body).html_safe
   end
 
