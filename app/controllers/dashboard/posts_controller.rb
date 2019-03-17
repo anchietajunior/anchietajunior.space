@@ -34,7 +34,7 @@ module Dashboard
     def update
       respond_to do |format|
         if @post.update(post_params)
-          format.html { redirect_to dashboard_post_path(@post), notice: 'Post was successfully updated.' }
+          format.html { redirect_to edit_dashboard_post_path(@post), notice: 'Post was successfully updated.' }
         else
           format.html { render :edit }
         end
