@@ -9,12 +9,7 @@ Rails.application.routes.draw do
 
   # PAGES
   get 'pages/index'
-  get 'pages/about'
   root 'pages#index'
-
-  # POSTS
-  get 'posts/',    to: 'posts#index', as: 'posts'
-  get 'posts/:id', to: 'posts#show', as: 'post'
 
   # DASHBOARD
   namespace :dashboard do
