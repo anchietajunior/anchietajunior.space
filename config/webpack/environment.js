@@ -1,11 +1,11 @@
-const { environment } = require('@rails/webpacker')
 const webpack = require('webpack')
+const { environment } = require('@rails/webpacker')
 const dotenv = require('dotenv')
 const { VueLoaderPlugin } = require('vue-loader')
 const vue = require('./loaders/vue')
 
-const config = require("@rails/webpacker/package/config")
-config.publicPath = `${host}/packs/`
+// const config = require("@rails/webpacker/package/config")
+// config.publicPath = `${host}/packs/`
 
 // include dotenv in project webpack
 const dotenvFiles = [
