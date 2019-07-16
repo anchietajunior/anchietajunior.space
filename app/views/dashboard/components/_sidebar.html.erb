@@ -1,6 +1,6 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard/books">
     <div class="sidebar-brand-icon rotate-n-15">
       <i class="fas fa-laugh-wink"></i>
     </div>
@@ -10,27 +10,25 @@
   <hr class="sidebar-divider">
 
   <div class="sidebar-heading">
-    Content
+    Books
   </div>
 
-  <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == 'dashboard/posts' %> ">
-    <a class="nav-link" href="<%= url_for(dashboard_posts_path) %>">
+  <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == 'dashboard/books' %> ">
+    <a class="nav-link" href="<%= url_for(dashboard_books_path) %>">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Posts</span></a>
+      <span>List Books</span></a>
   </li>
 
-  <hr class="sidebar-divider my-0">
-
-  <li class="nav-item <%= 'active' if params[:action] == 'new' && params[:controller] == 'dashboard/posts' %> ">
-    <a class="nav-link" href="<%= url_for(new_dashboard_post_path) %>">
+  <li class="nav-item <%= 'active' if params[:action] == 'new' && params[:controller] == 'dashboard/books' %> ">
+    <a class="nav-link" href="<%= url_for(new_dashboard_book_path) %>">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>New Post</span></a>
+      <span>New Book</span></a>
   </li>
 
   <hr class="sidebar-divider">
 
   <div class="sidebar-heading">
-    Control
+    Users
   </div>
 
   <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == 'dashboard/users' %> ">
@@ -38,8 +36,6 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Users</span></a>
   </li>
-
-  <hr class="sidebar-divider my-0">
 
   <li class="nav-item <%= 'active' if params[:action] == 'new' && params[:controller] == 'dashboard/users' %> ">
     <a class="nav-link" href="<%= url_for(new_dashboard_user_path) %>">

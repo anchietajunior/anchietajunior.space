@@ -1,0 +1,48 @@
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Books</h1>
+<%= render 'dashboard/shared/notifications' %>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Filters</h6>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <% if @books.present? %>
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Progress</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @books.each do |book| %>
+              <tr>
+                <td><%= book.title %></td>
+                <td><%= book.author %></td>
+                <td><%= book.progress %></td>
+                <td>
+                  <%= link_to dashboard_book_path(book) do %>
+                    <i class="fas fa-eye"></i>
+                  <% end %>
+                  <%= link_to edit_dashboard_book_path(book) do %>
+                    <i class="fas fa-edit"></i>
+                  <% end %>
+                  <%= link_to dashboard_book_path(book), method: :delete, data: { confirm: 'Delete book?' } do %>
+                    <i class="fas fa-trash"></i>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p>No books have been posted yet. </p>
+      <% end %>
+    </div>
+  </div>
+</div>

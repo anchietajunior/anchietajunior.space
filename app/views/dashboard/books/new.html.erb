@@ -1,0 +1,7 @@
+<h1 class="h3 mb-2 text-gray-800">New Book</h1>
+
+<%= render 'dashboard/components/notices'  %>
+
+<%= form_with(model: @book, url: dashboard_books_path, local: true) do |form| %>
+  <%= render 'form', book: @book, form: form %>
+<% end %>

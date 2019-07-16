@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="form-group">
+  <%= link_to 'Edit', edit_dashboard_book_path(@book), class: "btn btn-primary" %>
+</div>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @book.start %>
+</p>
+
+<p>
+  <strong>Progress:</strong>
+  <%= @book.progress %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @book.comment %>
+</p>
+
+<p><strong>Image:</strong></p>
+<%= image_tag(@book.image) %>

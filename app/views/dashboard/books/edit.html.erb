@@ -1,0 +1,9 @@
+<h1>Editing Book</h1>
+
+<%= render 'dashboard/shared/notifications' %>
+
+<span class="float-right"><%= link_to 'Show', dashboard_book_path(@book), class: "btn btn-primary" %></span>
+
+<%= form_with(model: @book, url: dashboard_book_path(@book), local: true) do |form| %>
+  <%= render 'form', book: @book, form: form %>
+<% end %>
