@@ -12,7 +12,7 @@
               <p><strong>Comment: </strong>{{ book.comment }}</p>
             </div>
             <div class="image-parent">
-                <img :src="book.image" class="img-fluid" :alt="book.title" style="width: 245px; height: 360px;">
+                <img :src="book.image" :alt="book.title" style="width: 245px; height: 360px;">
             </div>
           </li>
         </ul>
