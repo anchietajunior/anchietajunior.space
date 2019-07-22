@@ -1,6 +1,12 @@
  @import "bootstrap/dist/css/bootstrap";
  @import "resume.min";
 
- .image-parent {
-   margin-left: 30px;
- }
+.image-parent {
+  margin-left: 30px;
+}
+ 
+@media (max-width: 480px) { 
+  .image-parent {
+    display: none;
+  }
+}
