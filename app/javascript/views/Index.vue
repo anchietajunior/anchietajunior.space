@@ -5,14 +5,14 @@
         <h1 class="mb-0">Anchieta
           <span class="text-primary">Júnior</span>
         </h1>
-        <div class="subheading mb-5">Brazil - 
+        <div class="subheading mb-5">Brazil -
           <a>hello@anchietajunior.com</a>
         </div>
-        <p class="lead mb-5">I am an old music listener and i wrote my first line of code 
+        <p class="lead mb-5">I am an old music listener and i wrote my first line of code
         in 2009 using ActionScript3, after that some things with PHP, Java.
         <br/>
-        Since 2015 i use Ruby and Javascript (VueJS is awesome!) for almost everything. 
-        Most of the time focused on high 
+        Since 2015 i use Ruby and Javascript (VueJS is awesome!) for almost everything.
+        Most of the time focused on high
         productivity, Clean Code, TDD and Code Design.
 
         Sometimes I write Ruby stuff <a href="https://medium.com/@anchietajunior" target="_blank">here</a>.
