@@ -1,14 +1,14 @@
 <template>
-  <div class="container-fluid p-0">
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-      <div class="w-100">
-        <h1 class="mb-0">Anchieta
-          <span class="text-primary">Júnior</span>
+  <div class="page">
+    <section class="main" id="">
+      <div class="">
+        <h1 class="">Anchieta
+          <span class="">Júnior</span>
         </h1>
-        <div class="subheading mb-5">Brazil -
+        <div class="">Brazil -
           <a>hello@anchietajunior.com</a>
         </div>
-        <p class="lead mb-5">I am an old music listener and i wrote my first line of code
+        <p class="">I am an old music listener and i wrote my first line of code
         in 2009 using ActionScript3, after that some things with PHP, Java.
         <br/>
         Since 2015 i use Ruby and Javascript (VueJS is awesome!) for almost everything.
@@ -20,7 +20,7 @@
         Things i like to read about: Personal Development, Software Engineering, Tests,
         Microservices, APIs integrations and lots of things about Javascript ecosystem.
         </p>
-        <p class="lead mb-5">Senior Back-end developer at Instituto Padre Pio since 2016.</p>
+        <p class="">Senior Back-end developer at Instituto Padre Pio since 2016.</p>
 
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/anchieta-j%C3%BAnior-69568630/" target="_blank">
@@ -35,6 +35,10 @@
         </div>
       </div>
     </section>
-    <hr class="m-0">
+    <hr class="">
   </div>
 </template>
+
+<style scoped>
+
+</style>

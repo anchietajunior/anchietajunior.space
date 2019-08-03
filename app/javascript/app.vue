@@ -34,16 +34,5 @@ export default {
 </script>
 
 <style>
-.mobile-nav {
-  display: none;
-  border-top: 5px solid #ffffff;
-  width: 100%;
-  background: #343434;
-  text-align: center;
-}
-.mobile-nav li a {
-  font-size: 1.6em;
-  font-variant: small-caps;
-  color: #FFFFFF;
-}
+  
 </style>
