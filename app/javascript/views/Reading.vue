@@ -44,7 +44,7 @@ export default {
 <style scoped>
 .main {
   padding-top: 40px;
-  width: 600px;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -71,13 +71,29 @@ h4 {
   justify-content: space-between;
   align-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #ccc;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
 
 .reading--book--info {
   padding-right: 20px;
+}
+
+@media (max-width: 768px){
+  h1 {
+    text-align: center;
+  }
+
+  .reading--book {
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .image-parent {
+    margin-top: 20px;
+  }
 }
 </style>
 
