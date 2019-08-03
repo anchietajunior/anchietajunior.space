@@ -63,7 +63,6 @@ h4 {
   margin-top: 30px;
   width: 100%;
   padding-bottom: 20px;
-  border-bottom: 2px solid #333;
 }
 
 .reading--book {
@@ -72,6 +71,9 @@ h4 {
   justify-content: space-between;
   align-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .reading--book--info {
