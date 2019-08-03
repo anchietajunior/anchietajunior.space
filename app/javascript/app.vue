@@ -1,17 +1,6 @@
 <template>
   <div id="app">
     <Navbar></Navbar>
-    <ul class="navbar-nav mobile-nav" id="mobileNav">
-      <li class="nav-item">
-        <router-link class="nav-item nav-link active" to="/">About</router-link>
-      </li>
-      <li class="nav-item">
-        <router-link class="nav-item nav-link active" to="/reading">Reading</router-link>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="https://medium.com/@anchietajunior" target="_blank">Blog</a>
-      </li>
-    </ul> 
     <router-view/>
   </div>
 </template>
