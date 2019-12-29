@@ -1,1 +1,79 @@
-<div id="content"></div>
+<%= render 'pages/shared/nav' %>
+<%= render 'pages/shared/header' %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <div style="display: flex; flex-direction: row; justify-content: space-between">
+        <h3 class="section-title">Latest posts</h3>
+        <a class="btn" style="border: 1px solid #333; padding: 10px; height: 45px; border-radius: 4px; background: #e4e4e4" href="<%= posts_path %>">View all</a>
+      </div>
+      <% @posts.each do |post| %>
+        <div class="post-preview">
+          <%= link_to post do %>
+            <h2 class="post-title">
+              <%= post.title %>
+            </h2>
+          <% end %>
+          <p class="post-meta" style="color: #333">Publicado em
+            <%= post.published_at.strftime("%d do %m de %Y") %></p>
+        </div>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+
+  <% if @projects.present? %>
+    <div class="row" style="margin-top: 50px;">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div style="display: flex; flex-direction: row; justify-content: space-between">
+          <h3 class="section-title">Projects</h3>
+          <a class="btn" style="border: 1px solid #333; padding: 10px; height: 45px; border-radius: 4px; background: #e4e4e4" href="#">View all</a>
+        </div>
+          <div class="post-preview">
+            <a href="#">
+              <h2 class="post-title">
+                Fuel Costs
+              </h2>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <% if @books.present? %>
+    <div class="row" style="margin-top: 50px;">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div style="display: flex; flex-direction: row; justify-content: space-between">
+          <h3 class="section-title">Latest Reading</h3>
+          <a class="btn" style="border: 1px solid #333; padding: 10px; height: 45px; border-radius: 4px; background: #e4e4e4" href="#">View all</a>
+        </div>
+          <% @books.each do |book| %>
+            <div class="post-preview">
+              <a href="#">
+                <h2 class="post-title">
+                  <%= book.title %>
+                </h2>
+              </a>
+              <p class="post-meta" style="color: #333; margin-bottom: 10px">Start:
+                Start: <%= book.start %> | Progress: <%= book.progress %>
+              </p>
+              <div class="row">
+                <div class="col-lg-12 col-sm-12 d-flex justify-content-start align-items-start">
+                  <img src="<%= book.image %>" style="max-width: 150px; max-height: 200px; margin-right: 15px;" />
+                  <p style="margin-top: 0"><%= book.comment %></p>
+                </div>
+              </div>
+            </div>
+            <hr>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<hr style="margin-top: 60px;">
+
+<%= render 'pages/shared/footer' %>
