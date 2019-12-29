@@ -9,9 +9,19 @@
 
   <hr class="sidebar-divider">
 
-  <div class="sidebar-heading">
-    Books
-  </div>
+  <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == 'dashboard/posts' %> ">
+    <a class="nav-link" href="<%= url_for(dashboard_posts_path) %>">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Posts</span></a>
+  </li>
+
+  <li class="nav-item <%= 'active' if params[:action] == 'new' && params[:controller] == 'dashboard/posts' %> ">
+    <a class="nav-link" href="<%= url_for(new_dashboard_post_path) %>">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>New Post</span></a>
+  </li>
+
+  <hr class="sidebar-divider">
 
   <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == 'dashboard/books' %> ">
     <a class="nav-link" href="<%= url_for(dashboard_books_path) %>">

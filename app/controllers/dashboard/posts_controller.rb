@@ -54,7 +54,7 @@ module Dashboard
       end
 
       def post_params
-        params.require(:post).permit(:title, :body, :published, :published_at)
+        params.require(:post).permit(:title, :subtitle, :body, :published, :published_at)
       end
   end
 end
