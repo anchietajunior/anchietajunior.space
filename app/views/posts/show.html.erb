@@ -6,7 +6,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <h1><%= @post.title %></h2>
           <span class="post-meta" style="font-style: italic; font-size: 1em">Published at: <%= @post.published_at.strftime("%m/%d/%Y") %></span>
-          <div id="highlight"><%= markdown(@post.body) %></div>
+          <div id="post-content"><%= markdown(@post.body) %></div>
         </div>
       </div>
     </div>
