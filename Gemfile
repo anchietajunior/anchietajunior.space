@@ -18,8 +18,6 @@ gem 'rouge'
 gem 'draper'
 gem 'friendly_id', '~> 5.2.4'
 
-gem 'webpacker', '~> 4.x'
-
 group :development, :deployment do
   gem 'capistrano', '~> 3.11', require: false
   gem 'capistrano-rails', '~> 1.4', require: false
