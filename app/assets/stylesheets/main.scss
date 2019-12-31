@@ -289,9 +289,10 @@ header.masthead .post-heading .meta a {
 }
 
 .post-preview > a > .post-title {
-  font-size: 1em;
+  font-size: 0.8em;
   margin-top: 30px;
   margin-bottom: 10px;
+  color: #303841;
 }
 
 .post-preview > a > .post-subtitle {
@@ -300,10 +301,11 @@ header.masthead .post-heading .meta a {
 }
 
 .post-preview > .post-meta {
-  font-size: 18px;
+  font-size: 0.8em;
+  font-family: "Roboto", sans-serif;
   font-style: italic;
   margin-top: 0;
-  color: #868e96;
+  color: red;
 }
 
 .post-show {
@@ -329,7 +331,7 @@ header.masthead .post-heading .meta a {
 
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
@@ -433,4 +435,9 @@ footer .copyright {
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+}
+
+.books-comment {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
 }
