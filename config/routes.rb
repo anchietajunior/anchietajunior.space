@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   root 'pages#index'
+  get '/about-me', to: 'pages#about'
 
   resources :posts
 

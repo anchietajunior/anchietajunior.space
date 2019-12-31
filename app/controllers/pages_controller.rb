@@ -4,4 +4,6 @@ class PagesController < ApplicationController
     @projects = nil
     @books = Book.all
   end
+
+  def about;end
 end
