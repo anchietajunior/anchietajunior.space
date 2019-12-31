@@ -310,12 +310,14 @@ header.masthead .post-heading .meta a {
 
 .post-show {
   font-size: 18px;
-  font-style: italic;
   margin-top: 0;
   color: #868e96;
   font-family: "Roboto", sans-serif;
   font-size: 0.9em;
-  margin: 30px 0;
+  width: 100%;
+  text-align: center;
+  margin: 30px auto 0;
+  color: #f07b3f;
 }
 
 .post-preview > .post-meta > a {
