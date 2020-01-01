@@ -11,7 +11,7 @@
             </h2>
           <% end %>
           <p class="post-meta" style="color: #333">Publicado em
-            <%= post.published_at.strftime("%d do %m de %Y") %>
+            <%= post.published_at.strftime("%d do %m de %Y") %> - 
             <span>
               <%= post.category.try(:name) %>
             </span>
