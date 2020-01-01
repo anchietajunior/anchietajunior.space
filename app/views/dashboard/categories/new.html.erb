@@ -1,0 +1,8 @@
+<h1 class="h3 mb-2 text-gray-800">New Post</h1>
+
+<%= render 'dashboard/components/notices'  %>
+
+<%= form_with(model: @category, url: dashboard_categories_path, local: true) do |form| %>
+  <%= render 'form', category: @category, form: form %>
+<% end %>
+

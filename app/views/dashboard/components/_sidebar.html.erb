@@ -9,6 +9,20 @@
 
   <hr class="sidebar-divider">
 
+  <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == 'dashboard/categories' %> ">
+    <a class="nav-link" href="<%= url_for(dashboard_categories_path) %>">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Categories</span></a>
+  </li>
+
+  <li class="nav-item <%= 'active' if params[:action] == 'new' && params[:controller] == 'dashboard/categories' %> ">
+    <a class="nav-link" href="<%= url_for(new_dashboard_category_path) %>">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>New Category</span></a>
+  </li>
+
+  <hr class="sidebar-divider">
+
   <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == 'dashboard/posts' %> ">
     <a class="nav-link" href="<%= url_for(dashboard_posts_path) %>">
       <i class="fas fa-fw fa-tachometer-alt"></i>

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :books
     resources :posts
     resources :users
+    resources :categories
   end
 
   scope module: 'api' do

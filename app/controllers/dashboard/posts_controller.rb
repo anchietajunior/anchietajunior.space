@@ -15,9 +15,11 @@ module Dashboard
 
     def new
       @post = Post.new
+      @categories = Category.all
     end
 
     def edit
+      @categories = Category.all
     end
 
     def create
@@ -54,7 +56,7 @@ module Dashboard
       end
 
       def post_params
-        params.require(:post).permit(:title, :subtitle, :body, :published, :published_at)
+        params.require(:post).permit(:title, :category_id, :subtitle, :body, :published, :published_at)
       end
   end
 end

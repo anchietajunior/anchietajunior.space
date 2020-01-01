@@ -1,31 +1,54 @@
-class CategoriesController < ApplicationController
+module Dashboard
+  class CategoriesController < ApplicationController
 
-  before_action :category_params, only: [:show, :update, :destroy]
+    layout 'dashboard'
 
-  def index
-    @categories = Category.all
-  end
+    before_action :authorize
+    before_action :set_category, only: [:show, :edit, :update, :destroy]
 
-  def show;end
+    def index
+      @categories = Category.all
+    end
 
-  def create
-    @category = Category.new(category_params)
-    respond_to do |format|
+    def show;end
+
+    def new
+      @category = Category.new
+    end
+
+    def create
+      @category = Category.new(category_params)
       if @category.save
-        format.html { redirect_to dashboard_categories_path, notice: 'Category created' }
+        redirect_to dashboard_categories_path, notice: 'Category created'
       else
-        format.html { render :new }
+        render :new
       end
     end
-  end
 
-  private
+    def edit;end
 
-  def set_category
-    @category = Category.find(params[:id])
-  end
+    def update
+      if @category.update(category_params)
+        redirect_to dashboard_category_path(@category), notice: 'Category created'
+      else
+        render :new
+      end
+    end
 
-  def category_params
-    params.permit(:name)
+    def destroy
+      if @category.destroy
+        redirect_to dashboard_categories_path, notice: 'Category deleted'
+      end
+    end
+
+    private
+
+    def set_category
+      @category = Category.find(params[:id])
+    end
+
+    def category_params
+      params.require(:category).permit(:name)
+    end
   end
 end

@@ -1,0 +1,10 @@
+<h1>Editing Category</h1>
+
+<%= render 'dashboard/shared/notifications' %>
+
+<span class="float-right"><%= link_to 'Show', dashboard_category_path(@category), class: "btn btn-primary" %></span>
+
+<%= form_with(model: @category, url: dashboard_category_path(@category), local: true) do |form| %>
+  <%= render 'form', category: @category, form: form %>
+<% end %>
+
