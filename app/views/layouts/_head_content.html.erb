@@ -1,0 +1,7 @@
+<% if @post.present? %>
+  <title><%= @post.title %></title>
+  <meta name="description" content="<%= @post.title %> - Anchieta Júnior" />
+<% else %>
+  <title>Anchieta Júnior - Ruby, Javascript, Rails, React and more.</title>
+  <meta name="description" content="This is a simple blog of a simple web developer who likes to talk about Ruby and Javascript" />
+<% end %>
