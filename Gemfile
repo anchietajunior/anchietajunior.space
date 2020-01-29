@@ -6,6 +6,7 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem "puma", ">= 3.12.2"
+gem "rack", ">= 2.0.8"
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 5.0'
