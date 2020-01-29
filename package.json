@@ -22,7 +22,8 @@
     "vue-loader": "^15.7.0",
     "vue-router": "^3.0.7",
     "vue-template-compiler": "^2.6.10",
-    "vue-turbolinks": "^2.0.4"
+    "vue-turbolinks": "^2.0.4",
+    "serialize-javascript": "^2.1.2"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
