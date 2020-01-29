@@ -1,4 +1,4 @@
-# My personal Webbite and Blog
+# My personal website and blog
 
 About this app
 
