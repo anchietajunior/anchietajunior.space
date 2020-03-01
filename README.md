@@ -1,5 +1,3 @@
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
@@ -12,7 +10,7 @@
     An awesome blog about Ruby, Javascript and other things.
     <br />
     <a href="https://anchietajunior.space" target="_blank">Go to blog</a>
+    <br />
+    <a href="https://www.linkedin.com/in/anchietajunior/" target="_blank">Linkedin</a>
   </p>
 </p>
-
-[linkedin-url]: https://www.linkedin.com/in/anchietajunior/
