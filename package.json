@@ -13,7 +13,7 @@
     "jquery": "3.3.1",
     "jquery.easing": "^1.4.1",
     "prop-types": "^15.7.2",
-    "serialize-javascript": "^2.1.2"
+    "serialize-javascript": "^3.1.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
